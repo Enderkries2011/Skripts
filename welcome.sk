@@ -1,0 +1,24 @@
+on join:
+    set join message to "%nl%§8| YOUR_SERVER_NAME §8» §7%player% joined!%nl%"
+    
+    wait 2 seconds
+
+    send "§8§m                                                          "
+    send "§7Welcome to YOUR_SERVER_NAME §7, %player%!"
+    send ""
+    send "§6Rules:"
+    send "§7  ● §eDon't Hack"
+    send "§7  ● §eDon't Insult others"
+    send "§7  ● §eDon't Spam"
+    send "§7  ● §eDon't exploit bugs (e.g. duplication glitches)"
+    send "§7  ● §eDon't Crash/Lag the Server"
+    send ""
+    send "§c⚠ Breaking the Rules will result in a Punishment ⚠"
+    send "&6The Ip Is YOUR_SERVER_IP"
+    send "&5Do /discord to get the link of our discord server." # Remove this line if u dont have discordsrv on ur server
+    send "&5Optional u can link it join the discord then do /discord link" # Remove this line if u dont have discordsrv on ur server
+    send "&5U get a code click on the message to copy and send the code to Hype Bot" # Remove this line if u dont have discordsrv on ur server
+    send ""
+
+on quit:
+    set quit message to "%nl%§8| YOUR_SERVER_NAME §8» §7%player% left!%nl%"
