@@ -1,0 +1,24 @@
+command /clearchat:
+  aliases: /cchat
+  permission: ender.chat.clear
+  permission message: &cNo permission!
+  trigger:
+    loop 100 time:
+      broadcast ""
+    send "&6[&5Ender&6] &aChat has been cleared by &a%player%"
+command /mutechat:
+  permission: ender.chat.mute
+  permission message: &cNo permission!
+  trigger:
+    if {mutechat} is false:
+      set {mutechat} to true
+      broadcast "&6[&5Ender&6] &c&lChat has been muted by &6&o%player%"
+    else:
+      set {mutechat} to false
+      broadcast "&6[&5Ender&6] &a&lChat has been unmuted by &6&o%player%"
+
+on chat:
+  if player does not have permission "ender.chat.mute.bypass":
+    if {mutechat} is true:
+      cancel event
+      send "&6[&5Ender&6] &cChat is currently muted." to player
