@@ -1,0 +1,12 @@
+command /broadcast [<text>]:
+  permission: ender.broadcast
+  permission message: &cNo permission!
+  trigger:
+    if arg 1 is not set:
+      send "&7Please write something to broadcast!" to player
+      stop
+    if arg 1 is set:
+      broadcast ""
+      broadcast "&4&lBROADCAST"
+      broadcast "&7%arg 1%"
+      broadcast ""
