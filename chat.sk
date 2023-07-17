@@ -1,14 +1,14 @@
 command /clearchat:
   aliases: /cchat
   permission: ender.chat.clear
-  permission message: &cNo permission!
+  permission message: &6[&5Ender&6] &cNo permission!
   trigger:
     loop 100 time:
       broadcast ""
     send "&6[&5Ender&6] &aChat has been cleared by &a%player%"
 command /mutechat:
   permission: ender.chat.mute
-  permission message: &cNo permission!
+  permission message: &6[&5Ender&6] &cNo permission!
   trigger:
     if {mutechat} is false:
       set {mutechat} to true
