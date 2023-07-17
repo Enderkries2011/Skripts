@@ -1,0 +1,12 @@
+command /dupe:
+  permission: ender.dupe
+  permission message: "&6[&5Ender&6] &cYou don't have permission to do that!"
+  trigger:
+    if player's held item is air:
+      send "&6[&5Ender&6] &cYou need to hold an item. Ur hand is not dupeable u Know" to player
+    else:
+      set {_dupedItem} to player's held item
+      give player {_dupedItem}
+      play sound "ENTITY_PLAYER_LEVELUP" to player
+      send "&6[&5Ender&6] &a&lYou successfully duped %{_dupedItem}% :D" to player
+      send "&6[&5Ender&6] &a&oYou now Have 2x The items than before :)" to player
