@@ -1,0 +1,22 @@
+command /setspawn:
+    permission: spawn.setspawn
+    permission message: "&6[&5Ender&6] &7You do not have permission to do that."
+    trigger:
+        set {global.survival.spawn} to player's position
+        send "&6[&5Ender&6] &7SpawnPoint has been set."
+
+command /spawn:
+    trigger:
+        set {_waitedcommandspawn} to difference between {spawn.teleport.%player%.lastused} and now
+        if {_waitedcommandspawn} is less than 10 seconds:
+            message "&6[&5Ender&6] &7You cannot use this command for &a%difference between 10 seconds and {_waitedcommandspawn}%&7."
+            stop
+        else:
+            if {global.survival.spawn} is set:
+                teleport player to {global.survival.spawn}
+                set {spawn.teleport.%player%.lastused} to now
+                send "&6[&5Ender&6] &7You teleported to the Spawn."
+            else:
+                if player has permission "spawn.no.tell":
+                    send "&6[&5Ender&6]> &cThere is no spawn. Create one using &e/setspawn"
+                send "&6[&5Ender&6] &cThere was an error accessing your order."
