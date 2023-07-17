@@ -1,2 +1,2 @@
 # Skripts
-A Github Made by Enderkries2011 For Skripts (Minecrfat plugin)
+A Github Made by Enderkries2011 For Skripts (Minecraft plugin)
