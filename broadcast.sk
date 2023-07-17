@@ -1,9 +1,9 @@
 command /broadcast [<text>]:
   permission: ender.broadcast
-  permission message: &cNo permission!
+  permission message: &6[&5Ender&6] &cNo permission!
   trigger:
     if arg 1 is not set:
-      send "&7Please write something to broadcast!" to player
+      send "&6[&5Ender&6] &7Please write something to broadcast!" to player
       stop
     if arg 1 is set:
       broadcast ""
