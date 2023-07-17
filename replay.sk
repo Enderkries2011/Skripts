@@ -1,0 +1,10 @@
+on join:
+    # This Command Records a player when he joins
+    execute console command "/replay start %player%"
+
+on quit:
+    # This Command Stops Recording a player when he Leaves
+    execute console command "/replay stop %player%"
+
+
+    # Requires AdvancedReplay to be installed (allows u to record players and watch it back) https://www.spigotmc.org/resources/advancedreplay-1-8-1-20.52849/ (optional addon to it: https://www.spigotmc.org/resources/anticheat-replay.97845/)
